@@ -1,0 +1,19 @@
+<h1>Editar Ticket</h1>
+
+<h2><%= @ticket.subject %></h2>
+
+Remetente: <%= @ticket.from %>
+
+<div class ="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@ticket) do |f| %>
+      
+      <%= f.label :status %>
+      <%= f.select :status, ['Aberto', 'Resolvido',  'Fechado', 'Processando']%>
+    
+      <p><%= @ticket.body %></p>
+    
+      <%= f.submit "Salvar", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

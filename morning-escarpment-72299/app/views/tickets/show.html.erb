@@ -1,0 +1,5 @@
+<h2><%=link_to(h(@ticket.subject), tickets_path(@ticket)) %></h2>
+
+<div class="container-fluid" style="border:1px solid #cecece;">
+  <%= simple_format(@ticket.body) %>
+</div>

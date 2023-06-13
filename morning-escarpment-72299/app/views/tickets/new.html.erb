@@ -1,0 +1,22 @@
+<h1>Novo Ticket</h1>
+<div class = "row">
+  
+  <div class="col-md-7 col-md-offset-3">
+  
+    <%= form_for (@ticket) do |f| %>
+      <%= f.label :subject %>
+      <%= f.text_field :subject %>
+  
+      <%= f.label :Mensagem %>
+      <%= f.text_area :body, class: "form-control", style: "height:300x" %>
+  
+      <%= f.label :status %>
+      <%= f.select :status, ['Aberto', 'Resolvido',  'Fechado', 'Processando']%>
+  
+      <%= f.submit "Criar ticket", class: "btn btn-primary" %>
+    <% end %>
+
+    
+  </div>
+
+</div>
